@@ -1,0 +1,56 @@
+# ============================================================
+# AI Chess Engine using Minimax and Alpha-Beta Pruning
+# requirements.txt
+# ============================================================
+#
+# Install with:
+#   pip install -r requirements.txt
+#
+# Recommended: use a virtual environment (see README.md)
+#
+# Note on versions: Version floors are set to widely-available,
+# stable releases as of early 2026. If you are on a very new or
+# very old Python interpreter, pip will resolve compatible
+# versions automatically.
+# ============================================================
+
+# --- Core game / board logic -------------------------------------------
+# Provides board representation, legal move generation, FEN/PGN
+# parsing, and rules enforcement (check, checkmate, stalemate,
+# castling, en passant, promotion). Our AI search (Minimax /
+# Alpha-Beta) and evaluation function are built manually on top
+# of this board representation.
+python-chess>=1.999,<2.0
+
+# --- GUI / rendering ------------------------------------------------------
+# Used for the interactive chessboard, move highlighting, animations,
+# side panel, and all user interaction (mouse-based piece movement,
+# buttons for restart/undo/difficulty/algorithm switching).
+pygame>=2.5.0
+
+# --- Numerical utilities ---------------------------------------------------
+# Used in evaluation.py for piece-square table lookups, vectorized
+# board scoring helpers, and statistics aggregation in performance.py.
+numpy>=1.26.0
+
+# --- Search tree visualization ---------------------------------------------
+# matplotlib: renders performance charts (nodes expanded, execution
+# time, evaluation trends) and the board-evaluation graph.
+matplotlib>=3.8.0
+
+# networkx: builds the in-memory graph representation of the Minimax /
+# Alpha-Beta search tree (nodes = board states, edges = moves).
+networkx>=3.2.0
+
+# graphviz: renders the search tree graph (built with networkx) to a
+# high-quality PNG image (search_tree.png), showing explored nodes,
+# pruned branches, alpha/beta values, and the chosen principal variation.
+# NOTE: This is the Python *binding*. You also need the Graphviz
+# system binary installed separately (see README.md -> Installation).
+graphviz>=0.20.1
+
+# ============================================================
+# Standard library modules used (no installation required):
+#   dataclasses, typing, enum, time, json, csv, copy, os, sys,
+#   random, functools, math
+# ============================================================

@@ -1,0 +1,47 @@
+# ============================================================
+# AI Chess Engine — .gitignore
+# ============================================================
+
+# --- Python ---------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# --- Virtual environments --------------------------------------
+venv/
+.venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# --- Generated exports (regenerated on every run/game) ----------
+search_tree.png
+search_tree
+performance.csv
+performance.json
+game_history.txt
+evaluation_graph.png
+
+# --- IDE / editor ------------------------------------------------
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# --- Testing / coverage --------------------------------------------
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+
+# --- OS ------------------------------------------------------------
+Thumbs.db
